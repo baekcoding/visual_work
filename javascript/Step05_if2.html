@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step05_if2.html</title>
+</head>
+<body>
+    <script>
+    if(isMan){
+        document.querySelector("#one").innerText="당신은 남성이군요";
+    }
+    else {
+        document.querySelector("#one").innerText="당신은 여성이군요";
+    }
+
+    // 양자 택일의 간단한 로직은 3항 연산자를 활용해서 해결할 수도 있다.
+
+    let result = isMan ? "당신은 남성이군요" : "당신은 여성이군요";
+    </script>
+
+</body>
+</html>

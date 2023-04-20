@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>review</title>
+</head>
+<body>
+    <h1>회원 가입 폼 입니다.</h1>
+    <form action="join.jsp">
+        <label for="email">이메일</label>
+        <input type="text" id="email" name="email">
+        <fieldset>
+            <legend>성별 정보 선택</legend>
+            <label>
+                <input type="radio" name="gender" value="man"> 남자
+            </label>
+            <label>
+                <input type="radio" name="gender" value="women"> 여자
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>취미 정보 선택</legend>
+            <label>
+                <input type="checkbox" name="hobby" value="soccer"> 축구
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" value="baking"> 베이킹
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" value="piano"> 피아노
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" value="etc"> 기타
+            </label>
+        </fieldset>
+        <label for="job">직업</label>
+        <select name="job" id="job">
+            <option value="">선택</option>
+            <option value="programmer">프로그래머</option>
+            <option value="doctor">의사</option>
+            <option value="pianist">피아니스트</option>
+            <option value="etc">기타</option>
+        </select>
+        <br>
+        <label for="lunch">점심메뉴</label>
+        <select name="lunch" id="lunch">
+            <optgroup label="분식">
+                <option>라면</option>
+                <option>떡볶이</option>
+                <option>쫄면</option>
+            </optgroup>
+        </select>
+        <br>
+        <label for="myFile">첨부파일</label>
+        <input type="file" id="myFile" name="myfile">
+        <br>
+        <label for="comment"></label>
+        <textarea name="comment" id="comment"></textarea>
+        <br>
+        <button type="submit">가입</button>
+
+    </form>
+</body>
+</html>
