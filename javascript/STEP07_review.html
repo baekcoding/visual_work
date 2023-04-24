@@ -4,19 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STEP07_review.html</title>
+    <title>review</title>
 </head>
 <body>
-    <h1>자스로 문자열 추가하기</h1>
-    <div class="myDiv">
-        
-    </div>
     <script>
-        let p1 = document.createElement("p");
+        let num=75;
+        let result;
 
-        p1.innerText="p1입니다.";
+        if(num > 80){
+            num="고양이"
+        }
 
-        document.querySelector(".myDiv").append(p1);
+        if(num > 70){
+            num="강아지"
+        }
+
+        if(num > 60){
+            num="곰돌이";
+        }
+
+        console.log(num);
     </script>
 </body>
 </html>
