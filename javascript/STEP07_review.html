@@ -8,22 +8,14 @@
 </head>
 <body>
     <script>
-        let num=75;
-        let result;
-
-        if(num > 80){
-            num="고양이"
-        }
-
-        if(num > 70){
-            num="강아지"
-        }
-
-        if(num > 60){
-            num="곰돌이";
-        }
-
-        console.log(num);
+        // p 요소를 만들어서 참조값을 p1이라는 변수에 담기
+        let p1=document.createElement("p");
+        // 위에서 만든 p 요소에 innerText를 출력하고
+        p1.innerText="p1 입니다.";
+        // .wrapper div에 추가하기
+        document.querySelector("#addBtn").addEventListener("click", ()=>{
+            document.querySelector(".wrapper").append(p1);
+        })
     </script>
 </body>
 </html>
