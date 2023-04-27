@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step07_Example.html</title>
+    <style>
+        .container {
+            width: 768px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>친구 목록입니다.</h1>
+        <button id="printBtn">출력하기</button>
+        <ul id="friendList">
+
+        </ul>
+    </div>
+    <script>
+        let name = ["김구라", "해골", "원숭이", "주뎅이", "덩어리"];
+        //위의 배열에 저장된 이름을 친구 목록에 출력하기
+
+        for (let i = 0; i < name.length; i++) {
+            let li1 = document.createElement("li");
+            li1.innerText = name[i];
+            document.querySelector("#friendList").append(li1);
+        }
+
+        name.forEach((rv, i) => {
+            let li2 = document.createElement("li");
+            li2.innerText = rv;
+            document.querySelector("#friendList").append(li2);
+        })
+
+        document.querySelector("#printBtn").addEventListener("click", (event) => {
+            console.log(event)
+            name.forEach((rv, i) => {
+                let li3 = document.createElement("li");
+                li3.innerText = rv;
+                document.querySelector("#friendList").append(li3);
+            })
+        })
+    </script>
+</body>
+
+</html>
