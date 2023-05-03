@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step09_review.html</title>
+</head>
+
+<body>
+    <h1>스톱워치 만들기</h1>
+    <strong id="min">0</strong> :
+    <strong id="sec">0</strong> :
+    <strong id="mSec">0</strong>
+    <br>
+    <br>
+    <button id="startBtn">시작</button>
+    <button id="restart">재설정</button>
+
+    <script>
+        let min = 0, sec = 0, mSec = 0;
+        let isStarted = false;
+
+        document.querySelector("#startBtn").addEventListener("click", (e) => {
+            if (isStarted == false) {
+                isStarted = true;
+                e.target.innerText = "시작";
+            } else {
+                isStarted = false;
+                e.target.innerText = "중지";
+                
+            }
+        })
+
+        setInterval(() => {
+            if(isStarted==false){
+                return;
+            }
+
+            mSec++;
+            if (mSec == 100) {
+                sec++;
+                mSec = 0;
+            }
+            if (sec == 60){
+                min++;
+                sec = 0;
+            }
+            document.querySelector("#min").innerText = min;
+            document.querySelector("#sec").innerText = sec;
+            document.querySelector("#mSec").innerText = mSec;
+        }, 10)
+
+        document.querySelector("#restart").addEventListener("click", ()=>{
+            min=0, sec=0, mSec=0;
+        })
+    </script>
+</body>
+
+</html>
