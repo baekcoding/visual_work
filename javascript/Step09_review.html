@@ -1,61 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Step09_review.html</title>
+    <title>review</title>
+    <style>
+        canvas{
+            border: 1px solid red;
+        }
+    </style>
 </head>
-
 <body>
-    <h1>스톱워치 만들기</h1>
-    <strong id="min">0</strong> :
-    <strong id="sec">0</strong> :
-    <strong id="mSec">0</strong>
-    <br>
-    <br>
-    <button id="startBtn">시작</button>
-    <button id="restart">재설정</button>
-
+    <h1>요소 활용해 보기</h1>
+    <canvas id="myCanvas" width="800" height="500"></canvas>
     <script>
-        let min = 0, sec = 0, mSec = 0;
-        let isStarted = false;
+    let canvas = document.querySelector("#myCanvas");
+    let context = canvas.getContext("2d");
+    
+    let shotImg = new Image();
+    shotImg.src = "images/snipe.png";
 
-        document.querySelector("#startBtn").addEventListener("click", (e) => {
-            if (isStarted == false) {
-                isStarted = true;
-                e.target.innerText = "시작";
-            } else {
-                isStarted = false;
-                e.target.innerText = "중지";
-                
-            }
-        })
+    let holeImg = new Image();
+    holeImg.src = "images/hole.png";
 
-        setInterval(() => {
-            if(isStarted==false){
-                return;
-            }
+    let backImg = new Image();
+    backImg.src = "images/background.jpg";
 
-            mSec++;
-            if (mSec == 100) {
-                sec++;
-                mSec = 0;
-            }
-            if (sec == 60){
-                min++;
-                sec = 0;
-            }
-            document.querySelector("#min").innerText = min;
-            document.querySelector("#sec").innerText = sec;
-            document.querySelector("#mSec").innerText = mSec;
-        }, 10)
+    let shotX = 0;
+    let shotY = 0;
+    
+    let holeX = 400;
+    let holeY = 250;
 
-        document.querySelector("#restart").addEventListener("click", ()=>{
-            min=0, sec=0, mSec=0;
-        })
+    setInterval(()=>{
+
+        context.drawImage(backImg, 0, 0, 800, 500);
+
+        context.drawImage(holeImg, holeX, holeY, 20, 20);
+
+        context.drawImage(shotImg, 350, 210, 100, 100);
+
+    }, 10);
+
     </script>
 </body>
-
 </html>
