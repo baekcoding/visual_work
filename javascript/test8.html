@@ -4,30 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
-    <style>
-        #myCanvas{
-            border : 1px solid red;
-        }
-    </style>
+    <title>Document</title>
 </head>
 <body>
-    <canvas id="myCanvas" width="800" height="500"></canvas>
+    <input type="text" placeholder="번호입력" id="inputNum">
+    <br>
+    <input type="text" placeholder="이름입력" id="inputName">
+    <br>
+    <input type="text" placeholder="주소입력" id="inputAddr">
+    <br>
+    <button id="saveBtn">저장</button>
+    <button id="deleteBtn">삭제</button>
+    <table>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>이름</th>
+                <th>주소</th>
+                <th>삭제</th>
+            </tr>
+        </thead>
+        <tbody>
 
+        </tbody>
+    </table>
     <script>
-        const canvas = document.querySelector("#myCanvas");
-        const context = canvas.getContext("2d");
+        document.querySelector("#saveBtn").addEventListener("click", ()=>{
+            const num = Number(document.querySelector("#inputNum").value);
+            const name = document.querySelector("#inputName").value;
+            const addr = document.querySelector("#inputAddr").value;
 
-        let backImg = new Image();
-        backImg.src = "images/background.jpg";
+            const obj = {num, name, addr};
 
-        setInterval(()=>{
-            context.drawImage(backImg, 0, 0, 800, 500);
-        }, 10);
+            let members = [];
+            members = JSON.parse(obj)
+            members.push(obj);
+        });
 
-        
+        document.querySelector("#deleteBtn").addEventListener("click", ()=>{
 
-        
+        })
     </script>
 </body>
 </html>
