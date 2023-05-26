@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test.html</title>
+    <style>
+        div {
+            border: 1px dotted red;
+        }
+
+        h1,
+        p {
+            border: 1px dotted green;
+        }
+
+        div > div {
+            border: 1px solid blue;
+        }
+
+        div > div > div {
+            border: 1px dotted orange;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>반응형 Grid 만들기</h1>
+        <!-- 
+            col-6의 의미는 화면의 폭과 상관없이 항상 6/12의 크기 즉 50%의 width를 갖겠다는 것
+            col-sm-6의 의미는 조건부로 6/12의 크기 즉 50%의 width를 갖겠다는 것
+            sm은 화면의 크기가 576px 이상을 의미한다.
+         -->
+        <div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quibusdam temporibus eius libero blanditiis, sunt aperiam quia minima sapiente maxime praesentium sed aut possimus magni cum! Esse quo labore eveniet.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quibusdam temporibus eius libero blanditiis, sunt aperiam quia minima sapiente maxime praesentium sed aut possimus magni cum! Esse quo labore eveniet.</p>
+            </div>
+        </div>
+
+        <div>
+           
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quibusdam temporibus eius libero blanditiis, sunt aperiam quia minima sapiente maxime praesentium sed aut possimus magni cum! Esse quo labore eveniet.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quibusdam temporibus eius libero blanditiis, sunt aperiam quia minima sapiente maxime praesentium sed aut possimus magni cum! Esse quo labore eveniet.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quibusdam temporibus eius libero blanditiis, sunt aperiam quia minima sapiente maxime praesentium sed aut possimus magni cum! Esse quo labore eveniet.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quibusdam temporibus eius libero blanditiis, sunt aperiam quia minima sapiente maxime praesentium sed aut possimus magni cum! Esse quo labore eveniet.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
